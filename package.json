@@ -1,0 +1,12 @@
+{
+  "name": "fasta-tools",
+  "version": "0.1.0",
+  "description": "Tools for work with FASTA/FASTQ files (Bioinformatics).",
+  "keywords": ["fasta", "fastq", "bioinformatics"],
+  "author": "Josemi Juanes <josemijuanes@gmail.com>",
+  "main": "./index.js",
+  "repository": { "type": "git", "url": "git://github.com/jmjuanes/fasta-tools.git" },
+  "scripts": { },
+  "dependencies": { },
+  "license": "MIT"
+}
