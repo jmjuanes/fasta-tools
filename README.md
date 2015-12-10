@@ -1,2 +1,3 @@
-# fasta-tools
-Tools for work with FASTA/FASTQ files
+# Fasta Tools
+
+Tools for work with FASTA/FASTQ files (Bioinformatics).
