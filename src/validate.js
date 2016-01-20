@@ -46,6 +46,9 @@ function ValAndParse(str, format)
     //Initialize the quality
     obj.quality = '';
 
+    //Initialize the length
+    obj.length = 0;
+
     //Create a new counter for add the sequence
     var j = i + 1;
 
@@ -91,6 +94,9 @@ function ValAndParse(str, format)
       if(obj.quality === ''){ return {status: false, arr: null}; }
     }
 
+    //Add the sequence length
+    obj.length = obj.sequence.length;
+    
     //Increment the i
     i = j;
 
