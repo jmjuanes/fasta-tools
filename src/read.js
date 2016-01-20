@@ -10,6 +10,12 @@ var ValidateFormat = require('./utils/validate-format.js');
 //Function for read a fasta/fastq file
 function ReadFile(file, format, callback)
 {
+  //Check the file
+  if(typeof file !== 'string') { throw new Error('No filename provided'); }
+
+  //Check the format
+  if(typeof format !== 'string') { throw new Error('You must provide an input format'); }
+  
   //Read the file
   fs.readFile(file, 'utf8', function(err, data){
 
@@ -20,7 +26,7 @@ function ReadFile(file, format, callback)
       console.error('Error reading the fasta/fastq file');
 
       //Return null object
-      return null; 
+      return null;
     }
 
     //Get the fasta object
@@ -35,6 +41,12 @@ function ReadFile(file, format, callback)
 //Function for reat a fasta/fastq file sync
 function ReadFileSync(file, format)
 {
+  //Check the file
+  if(typeof file !== 'string') { throw new Error('No filename provided'); }
+
+  //Check the format
+  if(typeof format !== 'string') { throw new Error('You must provide an input format'); }
+
   //Get the file content
   var data = fs.readFileSync(file, 'utf8');
 
@@ -67,6 +79,9 @@ function ReadStrSync(str, format)
   //Set the content as empty
   fobj.content = [];
 
+  //Initialize the length
+  fobj.num = 0;
+
   //Validate the fasta
   var val = Validate.ValParse(str, format);
 
@@ -75,6 +90,9 @@ function ReadStrSync(str, format)
   {
     //Save the content
     fobj.content = val.arr;
+
+    //Save the length
+    fobj.num = fobj.content.length;
   }
   else
   {
