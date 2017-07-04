@@ -19,6 +19,13 @@ Import in your project:
 var fasta_tools = require('fasta-tools');
 ```
 
+## FASTA and FASTQ formats
+
+### The FASTA format
+### The FASTQ format
+### The FASTA Object format
+### the FASTQ Object format
+
 ## API
 
 ### fasta_tools.read(file, cb)
