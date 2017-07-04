@@ -1,14 +1,11 @@
-//Import source functions
-var Read = require('./src/read.js');
-var Validate = require('./src/validate.js');
-var Save = require('./src/save.js');
+//Convert a fasta object to a fastq
+module.exports.toFastQ = require('./lib/convert.js').toFastQ;
 
-//Exports to node
-module.exports = {
-  Read: Read.File,
-  ReadSync: Read.FileSync,
-  Validate: Validate.Val,
-  ValidateSync: Validate.ValSync,
-  Save: Save.Save,
-  SaveSync: Save.SaveSync
-};
+//Convert a fastq object to a fasta
+module.exports.toFasta = require('./lib/convert.js').toFasta;
+
+//Read a fasta/fastq file
+module.exports.read = require('./lib/read.js');
+
+//Write a fasta/fastq file
+module.exports.write = require('./lib/write.js');
