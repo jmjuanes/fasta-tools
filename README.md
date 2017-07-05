@@ -37,9 +37,9 @@ Read a **FASTA/FASTQ** file.
 
 Write a **FASTA/FASTQ** file.
 
-### fastq_obj = fasta_tools.toFastQ(fasta_obj)
+### fastq_obj = fasta_tools.toFastQ(fasta_obj, quality)
 
-Converts a **FASTA Object** to a **FASTQ Object** assuming a quality score of 40.
+Converts a **FASTA Object** to a **FASTQ Object** assuming a quality score of `quality`.
 
 ### fasta_obj = fasta_tools.toFasta(fastq_obj)
 
