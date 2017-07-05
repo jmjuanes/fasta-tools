@@ -12,7 +12,7 @@ fasta_tools.read('./correct.fasta', function(error, obj_fasta)
   console.log(obj_fasta);
 
   //Convert to fastq
-  var obj_fastq = fasta_tools.toFastQ(obj_fasta);
+  var obj_fastq = fasta_tools.toFastQ(obj_fasta, 20);
 
   //Display in console the fastq object
   console.log('FASTQ OBJECT:');
